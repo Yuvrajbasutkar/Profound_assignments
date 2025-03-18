@@ -1,0 +1,167 @@
+// 1. Write a program to print Hello World on output screen
+#include <stdio.h>
+
+/*int main() {
+    printf("Hello World");
+    return 0;
+}*/
+
+// 2. WAP to calculate Simple interest.
+// S.I. = (Principle × Rate of interest per annum × Time in year)/100  
+
+/*int main(){
+    float p,r,t;
+    printf("Enter the principle ammount: ");
+    scanf("%f",&p);
+    printf("Enter the Rate of interest per annum: ");
+    scanf("%f",&r);
+    printf("Enter the Time in year: ");
+    scanf("%f",&t);
+    float si = (p*r*t)/100;
+    printf("The Simple Interest will be: %.2f",si);
+    return 0;
+}*/
+
+// 3. WAP to find out perimeter and area of the Square and Rectangle
+
+/*void square(){
+    float area, perimeter, side;
+    printf("Enter length of side of square: ");
+    scanf("%f",&side);
+    area = side * side;
+    perimeter = 4 * side;
+    printf("\nArea of square is: %.2f", area);
+    printf("\nPerimeter of square is: %.2f", perimeter);
+}
+void rectangle(){
+    float area, perimeter, length, width;
+    printf("Enter length of rectangle: ");
+    scanf("%f",&length);
+    printf("Enter width of rectangle: ");
+    scanf("%f",&width);
+    area = length * width;
+    perimeter = 2 * (length + width);
+    printf("\nArea of rectangle is: %.2f", area);
+    printf("\nPerimeter of rectangle is: %.2f", perimeter);
+}
+int main(){
+    int choice;
+    do {
+        printf("\n\nChoose an option:\n1. Square\n2. Rectangle\n3. Exit\nEnter your choice: ");
+        scanf("%d", &choice);
+        switch (choice) {
+            case 1:
+                square();
+                break;
+            case 2:
+                rectangle();
+                break;
+            case 3:
+                printf("Exiting the program.\n");
+                break;
+            default:
+                printf("Invalid choice! Please try again.\n");
+        }
+    } while (choice != 3);
+
+    return 0;
+}   */
+
+// 4. WAP to convert Fahrenheit temp in degree Celsius.
+// F = ((9*C)) / 5) + 32
+// C = ( (F - 32) * 5 ) / 9
+
+/*int main(){
+    float F,C;
+    printf("Enter the Fahrenheit temperature: ");
+    scanf("%f",&F);
+    C = ( (F - 32) * 5 ) / 9;
+    printf("The Degree Celsius temperature is: %.2f degree celsius", C);
+    return 0;
+}*/
+
+// 5. WAP to demonstrate arithmetic operation on two integer number
+
+/*int main(){
+    int num1,num2, choice;
+    do {
+        printf("\n\nEnter the first integer: ");
+        scanf("%d",&num1);
+        printf("Enter the second integer: ");
+        scanf("%d",&num2);
+        printf("\nChoices:\n1. Add\n2. Sub\n3. Multiply\n4. Divide\n5. Exit\n   Enter your choice: ");
+        scanf("%d",&choice);
+        switch(choice){
+            case 1:
+                printf("Addition is: %d", num1 + num2);
+                break;
+            case 2:
+                printf("Substraction is: %d", num1 - num2);
+                break;
+            case 3:
+                printf("Multiplication is: %d", num1 * num2);
+                break;
+            case 4:
+                printf("Division is: %d", num1 / num2);
+                break;
+            case 5:
+                printf("Exiting the program.\n");
+                break;
+            default:
+                printf("Invalid choice! Please try again.\n");
+        }
+    }while(choice != 5);
+    return 0;
+}*/
+
+//  6. Write a program which will accept three integer numbers from user and find out greatest among them using conditional operator
+
+int main() {
+    int a,b,c;
+    printf("Enter first numbers: ");
+    scanf("%d",&a);
+    printf("Enter second numbers: ");
+    scanf("%d",&b);
+    printf("Enter third numbers: ");
+    scanf("%d",&c);
+    if(a > b && a > c){
+        printf("%d is greater than all",a);
+    } else if(b > a && b > c){
+        printf("%d is greater than all",b);
+    } else if(c > a && c > b){
+        printf("%d is greater than all",c);
+    } else if(a == b && b==c){
+        printf("All are equale");
+    }
+    return 0;
+}
+
+// 7. Accept two numbers and perform swapping with third variable, and without third variable 
+#include <stdio.h>
+
+int main() {
+    int a,b;
+    printf("Enter first numbers: ");
+    scanf("%d",&a);
+    printf("Enter second numbers: ");
+    scanf("%d",&b);
+    printf("\nNumber before Swapping are num1 = %d , num2 = %d", a,b);
+    int c = a;
+    a = b;
+    b = c;
+    printf("\nNumber after Swapping are num1 = %d , num2 = %d", a,b);
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
