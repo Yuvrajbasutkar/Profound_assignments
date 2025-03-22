@@ -1,15 +1,18 @@
+
+   ---------------------------------------------- Topic : Basic Programs ---------------------------------------------- 
+
 // 1. Write a program to print Hello World on output screen
 #include <stdio.h>
 
-/*int main() {
+int main() {
     printf("Hello World");
     return 0;
-}*/
+}
 
 // 2. WAP to calculate Simple interest.
 // S.I. = (Principle × Rate of interest per annum × Time in year)/100  
 
-/*int main(){
+int main(){
     float p,r,t;
     printf("Enter the principle ammount: ");
     scanf("%f",&p);
@@ -20,11 +23,11 @@
     float si = (p*r*t)/100;
     printf("The Simple Interest will be: %.2f",si);
     return 0;
-}*/
+}
 
 // 3. WAP to find out perimeter and area of the Square and Rectangle
 
-/*void square(){
+void square(){
     float area, perimeter, side;
     printf("Enter length of side of square: ");
     scanf("%f",&side);
@@ -65,24 +68,24 @@ int main(){
     } while (choice != 3);
 
     return 0;
-}   */
+}
 
 // 4. WAP to convert Fahrenheit temp in degree Celsius.
-// F = ((9*C)) / 5) + 32
+// F = ((9*C) / 5) + 32
 // C = ( (F - 32) * 5 ) / 9
 
-/*int main(){
+int main(){
     float F,C;
     printf("Enter the Fahrenheit temperature: ");
     scanf("%f",&F);
     C = ( (F - 32) * 5 ) / 9;
     printf("The Degree Celsius temperature is: %.2f degree celsius", C);
     return 0;
-}*/
+}
 
 // 5. WAP to demonstrate arithmetic operation on two integer number
 
-/*int main(){
+int main(){
     int num1,num2, choice;
     do {
         printf("\n\nEnter the first integer: ");
@@ -112,7 +115,7 @@ int main(){
         }
     }while(choice != 5);
     return 0;
-}*/
+}
 
 //  6. Write a program which will accept three integer numbers from user and find out greatest among them using conditional operator
 
@@ -137,6 +140,7 @@ int main() {
 }
 
 // 7. Accept two numbers and perform swapping with third variable, and without third variable 
+// with third variable
 #include <stdio.h>
 
 int main() {
@@ -153,8 +157,455 @@ int main() {
     return 0;
 }
 
+// without third variable
+#include <stdio.h>
+
+int main() {
+    int a,b;
+    printf("Enter first numbers: ");
+    scanf("%d",&a);
+    printf("Enter second numbers: ");
+    scanf("%d",&b);
+    printf("\nNumber before Swapping are num1 = %d , num2 = %d", a,b);
+    a = a + b;
+    b = a - b;
+    a = a - b;
+    printf("\nNumber after Swapping are num1 = %d , num2 = %d", a,b);
+    return 0;
+}
+
+// 8. WAP to accept five subject marks and find out total and average of the marks.
+
+#include <stdio.h>
+
+int main() {
+    int marks[5], total = 0, avg = 1;
+    for(int i = 0; i < 5; i++){
+        printf("Enter marks of subject %d : ",i+1);
+        scanf("%d",&marks[i]);
+        total += marks[i];
+        avg = total / (i+1);
+    }
+    printf("Total marks are : %d",total);
+    printf("\nAverage marks are : %d",avg);
+
+    return 0;
+}
 
 
+// 9. WAP which calculate speed for time and distance.
+//      Speed=(distance/time)
+
+#include <stdio.h>
+
+int main() {
+    float times,distance;
+    printf("Enter the time in seconds: ");
+    scanf("%d",&times);
+    printf("Enter the distance in meter: ");
+    scanf("%d",&distance);
+    float speed = distance / times;
+    printf("Speed is: %.2f",speed);
+
+    return 0;
+}
+
+
+
+ ---------------------------------------------- Topic : Selection statement ---------------------------------------------- 
+
+
+// 1. WAP to check whether a number is even or odd
+
+#include <stdio.h>
+
+int main() {
+    int num;
+    printf("Enter a number: ");
+    scanf("%d",&num);
+    if(num % 2 == 0){
+        printf("Given number %d is an even number.", num);
+    }else {
+        printf("Given number %d is a odd number.", num);
+    }
+
+    return 0;
+}
+
+// 2 . WAP to check whether a person is eligible for voting or not.
+
+#include <stdio.h>
+int main() {
+    int age;
+    printf("Enter the age of person: ");
+    scanf("%d",&age);
+    if(age >= 18){
+        printf("The person can vote.");
+    }else {
+        printf("The person can not vote.");
+    }
+
+    return 0;
+}
+
+// 3. WAP to accept Cost Price from user and ask whether the user is a student or not. If the user is student and cost price is greater than 500, give discount of 10% ELSE discount will be 5%. If user is not student and cost price is greater 500 then give discount of 8% ELSE discount will be 2%. (Take all inputs from USER)
+
+
+#include <stdio.h>
+
+void discount(float discount_val, int amount){
+    float discount_amount = amount - (amount * (discount_val / 100));
+    printf("Your final paying cost will be : %.3f/- .", discount_amount);
+    printf("\nYou have got %.0f%% discount.", discount_val);
+}
+
+int main() {
+    int cost_price;
+    char choice;
+    
+    printf("Enter the cost price: ");
+    scanf("%d", &cost_price);
+
+    printf("Are you a student (Y/N): ");
+    scanf(" %c", &choice);
+
+    if(choice == 'y' || choice == 'Y'){
+        if(cost_price > 500)
+            discount(10, cost_price);
+        else
+            discount(5, cost_price);
+    }
+    else{
+        if(cost_price > 500)
+            discount(8, cost_price);
+        else
+            discount(2, cost_price);
+    }
+
+    return 0;
+}
+
+// 4. WAP to check whether Number is positive or negative or ZERO
+
+#include <stdio.h>
+int main(){
+    int num;
+    printf("Enter a number: ");
+    scanf("%d",&num);
+    if(num == 0)
+        printf("Your enter value is zero (0).");
+    else if(num < 0)
+        printf("Your enter value is negative (%d).",num);
+    else
+        printf("Your enter value is positive (%d).",num);
+}
+
+// 5. WAP a program to accept Percentage from user and check the GRADE
+    //  A. Above 70% - Grade A 
+    //  B. Between 60% to 70% - Grade B+. 
+    //  C. Between 45% to 60% - Grade B. 
+    //  D. Between 35% to 45% - Grade C.
+    //  E. Less than 35% - Fail
+
+#include <stdio.h>
+int main(){
+    float percentage;
+    printf("Enter the percentage of student: ");
+    scanf("%f",&percentage);
+    if(percentage >= 70)
+        printf("The student will get A Geade");
+    else if(percentage >= 60 && percentage < 70)
+        printf("The student will get B+ Geade");
+    else if(percentage >= 45 && percentage < 60)
+        printf("The student will get B Geade");
+    else if(percentage >= 35 && percentage < 45)
+        printf("The student will get C Geade");
+    else if(percentage < 35)
+        printf("The student is fail");
+}
+
+// 6. Accept three numbers from user and find out largest number among three and also find out whether that three numbers are equal or not.(else if ladder)
+
+#include<stdio.h>
+int main() {
+    int a,b,c;
+    printf("Enter first numbers: ");
+    scanf("%d",&a);
+    printf("Enter second numbers: ");
+    scanf("%d",&b);
+    printf("Enter third numbers: ");
+    scanf("%d",&c);
+    if(a > b && a > c){
+        printf("%d is greater than all",a);
+    } else if(b > a && b > c){
+        printf("%d is greater than all",b);
+    } else if(c > a && c > b){
+        printf("%d is greater than all",c);
+    } else if(a == b && b==c){
+        printf("All are equale");
+    } else if(a == b || a == c || b == c){
+        if(a == b && a > c){
+            printf("First and Second number are equal and are greater.");
+        }
+        else if(a == c && a > b){
+            printf("First and Third number are equal and are greater.");
+        }
+        else{
+            printf("Second and Third number are equal and are greater.");
+        }
+    }
+    return 0;
+}
+
+
+
+ ---------------------------------------------- Topic : Branching statement ---------------------------------------------- 
+
+// 1. WAP using following menus-
+    //  Choice-1: Accept number and find out square and cube.
+    //  Choice-2: Check whether the given year is LEAP or not. 
+    //  If user enters wrong choice appropriate message should get displayed.
+#include <stdio.h>
+
+void squareCube(){
+    int num = 0;
+    printf("Enter a number: ");
+    scanf(" %d", &num);
+    printf("The Square of given number (%d) is: %d", num, num*num);
+    printf("\nThe Cube of given number (%d) is: %d", num, num*num*num);
+}
+void isLeap(){
+    int year = 0;
+    printf("Enter the yaer: ");
+    scanf(" %d", &year);
+    if(year%4 == 0){
+        printf("Your enter year (%d) is a LEAP year.",year);
+    } else {
+        printf("Your enter year (%d) is not a LEAP year.", year);
+    }
+}
+#include<stdio.h>
+int main(){
+    int choice;
+    printf("1. Accept number and find out square and cube of it.");
+    printf("\n2. Check whether the given year is LEAP or not.");
+    printf("\nEnter your choice (1,2): ");
+    scanf("%d",&choice);
+    switch(choice){
+        case 1:
+            squareCube();
+            break;
+        case 2:
+            isLeap();
+            break;
+        default:
+            printf("Enter a valid choice");
+            break;
+    }
+    return 0;
+}
+
+// 2. WAP using switch case for arithmetic operation on two numbers, if user enters an operator as choice, the appropriate operation should perform.If user enters wrong choice appropriate message should get displayed.
+    //  i.e. + is for addition
+    //       - is for subtraction
+
+#include <stdio.h>
+int main(){
+    int a, b;
+    char choice;
+    printf("Enter 2 numbers: ");
+    scanf(" %d %d",&a,&b);
+    printf("Enter the operator (+,-,*,/,%): ");
+    scanf(" %c", &choice);
+    switch(choice){
+        case '+':
+            printf("The addition is: %d",a+b);
+            break;
+        case '-':
+            printf("The Substraction is: %d",a-b);
+            break;
+        case '*':
+            printf("The Multiplication is: %d",a*b);
+            break;
+        case '/':
+            printf("The Division is: %d",a/b);
+            break;
+        case '%':
+            printf("The reminder is: %d",a%b);
+            break;
+        default:
+            printf("Please enter a valid choice!!!");
+            break;
+    }
+    return 0;
+}
+
+
+
+ ---------------------------------------------- Topic : Looping statements ---------------------------------------------- 
+
+// 1. WAP to check whether a number is prime or not.
+
+#include <stdio.h>
+void isPrime(int num){
+    int result = 0;
+    for(int i = 1;i <=num; i++){
+        if(num % i == 0){
+            result++;
+        }
+        if(result > 2){
+            break;
+        }
+    }
+    if(result == 2){
+        printf("Your entered number (%d) is a prime number.");
+    } else {
+        printf("Your entered number (%d) is not a prime number.");
+    }
+}
+
+int main(){
+    int num;
+    printf("Enter a number: ");
+    scanf(" %d", &num);
+    if(num < 0){
+        printf("Please enter a positive number. \nPrime numbers are not in negative.");
+    } else {
+        isPrime(num);
+    }
+    return 0;
+}
+
+// 2. WAP to accept a number from user and find out sum of even digits from that given number.
+
+#include <stdio.h>
+
+int main(){
+    int num;
+    printf("Enter a number: ");
+    scanf(" %d",&num);
+    int sum = 0;
+    for(int i = 1; i <= num; i++){
+        if(i % 2 == 0){
+            sum += i;
+        }
+    }
+    printf("The sum is: %d",sum);
+    return 0;
+}
+
+// 3. WAP to print the following pattern : 
+//          * 
+//         ***
+//        *****
+//       *******
+//      *********
+
+#include <stdio.h> 
+int main(){
+    for (int i = 0; i<5;i++){
+            for (int j = 0; j<=i;j++){
+            if(i==0){
+                printf("*");
+            }
+            if(i>0){
+                printf("*");
+            }
+        }
+        printf("\n");
+        }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// extra work. 
+#include <stdio.h>
+
+void add_no_r_p(){
+    printf("Using No return and parameters\n");
+    int a,b;
+    printf("Enter 2 numbers: ");
+    scanf(" %d %d",&a,&b);
+    printf("The addition is: %d\n",a+b);
+}
+int add_r_no_p(){
+    printf("Using return and no parameters\n");
+    int a,b;
+    printf("Enter 2 numbers: ");
+    scanf(" %d %d",&a,&b);
+    return a+b;
+}
+void add_p_no_r(int a, int b){
+    printf("Using parameters and no return\n");
+    printf("The addition is: %d\n",a+b);
+}
+int add_p_r(int a, int b){
+    printf("Using return and parameters\n");
+    return a+b;
+}
+void get_input(int choice){
+    int a, b;
+    printf("Enter 2 numbers: ");
+    scanf(" %d %d",&a,&b);
+    if (choice == 1){
+        add_p_no_r(a,b);
+    } else {
+        int fun4 = add_p_r(a, b);
+        printf("The addition is: %d\n",fun4);
+    }
+}
+
+int main(){
+    add_no_r_p();
+    int fun2 = add_r_no_p();
+    printf("The addition is: %d\n",fun2);
+    get_input(1);
+    get_input(2);
+    return 0;
+}
+
+
+// pointer concept.
+#include <stdio.h>
+
+void swap(int *p1,int *p2){
+    int temp = *p2;
+    *p2 = *p1;
+    *p1 = temp;
+}
+int main() {
+    int a = 10;
+    int *p = &a;
+    *p = 20;
+    printf("%u",p);
+    printf("\n%u",&a);
+    printf("\nSize of int pointer: %zu bytes\n", sizeof(int *));
+    printf("Size of char pointer: %zu bytes\n", sizeof(char *));
+    printf("Size of float pointer: %zu bytes\n", sizeof(float *));
+    printf("Size of double pointer: %zu bytes\n", sizeof(double *));
+    int x = 10, y = 20;
+    printf("Before swap: x = %d, y = %d",x,y);
+    swap(&x,&y);
+    printf("\nAfter swap: x = %d, y = %d",x,y);
+    return 0;
+}
 
 
 
