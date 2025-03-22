@@ -1,0 +1,7 @@
+Field,Type,Null,Key,Default,Extra
+eid,int,NO,PRI,NULL,
+fname,varchar(20),YES,,NULL,
+lname,varchar(20),YES,,NULL,
+salary,int,YES,,NULL,
+joining,datetime,YES,,NULL,
+department,varchar(20),YES,,NULL,

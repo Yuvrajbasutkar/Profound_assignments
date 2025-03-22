@@ -1,0 +1,4 @@
+Synchronized--->wait for 1 task to complete that take another even if capable of performing other task.
+--->Slow compared to Asynch
+Asynchronized--->perform multiple task at a time till its capacity.
+----> fast as multiple task are performed simultaneously.

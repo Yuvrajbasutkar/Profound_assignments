@@ -1,0 +1,4 @@
+Field,Type,Null,Key,Default,Extra
+rid,int,NO,PRI,NULL,
+idate,date,YES,,NULL,
+iamount,int,YES,,NULL,
