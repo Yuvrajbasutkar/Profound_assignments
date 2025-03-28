@@ -35,14 +35,33 @@
 // the value in a is 50
 // the value refered by prt is 50
 
+// #include<stdio.h>
+// void main()
+//    {
+//     int *prt;
+//     int a=50;
+//     prt =&a;
+//     prt--;
+//     printf("the address of a is %u\n", &a);
+//     printf("the address of pointer is %u\n", prt);
+//     printf("the value in a is %d\n",a);
+//     printf("the value refered by prt is %d\n", *prt);
+//    }
+
+// OUTPUT
+// the address of a is 1096808356
+// the address of pointer is 1096808352
+// the value in a is 50
+// the value refered by prt is 1096808400
+
+// 1 byte char
+// 4 byte int
+// 4 byte float
+// 8 byte double
+// 8 byte long
+
 #include<stdio.h>
- void main(){
-    int *prt;
-    int a=50;
-    prt =&a;
-    prt--;
-    printf("the address of a is %u\n", &a);
-    printf("the address of pointer is %u\n", prt);
-    printf("the value in a is %d\n",a);
-    printf("the value refered by prt is %d\n", *prt);
- }
+void main()
+{
+
+}
